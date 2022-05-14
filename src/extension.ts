@@ -415,8 +415,30 @@ function getLanguageConfig(languageId: string): any {
   let configFilepath: string = null;
 	for (const _ext of vscode.extensions.all) {
 		
-	let configFilepath:string = null;
-	for ( const _ext of vscode.extensions.all ) {
+//   _   _                 _ _        ____    _
+//  | | | | __ _ _ __   __| | | ___  |___ \  | | __ _ _ __   __ _  ___
+//  | |_| |/ _` | '_ \ / _` | |/ _ \   __) | | |/ _` | '_ \ / _` |/ __|
+//  |  _  | (_| | | | | (_| | |  __/  / __/  | | (_| | | | | (_| |\__ \
+//  |_| |_|\__,_|_| |_|\__,_|_|\___| |_____| |_|\__,_|_| |_|\__, ||___/
+//    __ _ ___   ___ _ __   ___  ___(_) __ _| |   ___ __ _ _|___/__  ___ 
+//   / _` / __| / __| '_ \ / _ \/ __| |/ _` | |  / __/ _` / __|/ _ \/ __|
+//  | (_| \__ \ \__ \ |_) |  __/ (__| | (_| | | | (_| (_| \__ \  __/\__ \
+//   \__,_|___/ |___/ .__/ \___|\___|_|\__,_|_|  \___\__,_|___/\___||___/
+//                  |_|
+		
+    if (_ext.id === "vscode.javascript") {
+      return {
+        comments: {
+          lineComment: "//",
+          blockComment: ["/*", "*/"],
+        },
+      };
+    }
+
+    if (_ext.id === "vscode.configuration-editing") {
+      return {};
+    }
+
     if (
       _ext.id.startsWith("vscode.") &&
       _ext.packageJSON.contributes &&
