@@ -1,47 +1,46 @@
 ```
-██████╗  █████╗ ███╗   ██╗███╗   ██╗███████╗██████╗
-██╔══██╗██╔══██╗████╗  ██║████╗  ██║██╔════╝██╔══██╗
-██████╔╝███████║██╔██╗ ██║██╔██╗ ██║█████╗  ██████╔╝
-██╔══██╗██╔══██║██║╚██╗██║██║╚██╗██║██╔══╝  ██╔══██╗
-██████╔╝██║  ██║██║ ╚████║██║ ╚████║███████╗██║  ██║
-╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝
-
-
-
- ██████╗ ██████╗ ███╗   ███╗███╗   ███╗███████╗███╗   ██╗████████╗███████╗
-██╔════╝██╔═══██╗████╗ ████║████╗ ████║██╔════╝████╗  ██║╚══██╔══╝██╔════╝
-██║     ██║   ██║██╔████╔██║██╔████╔██║█████╗  ██╔██╗ ██║   ██║   ███████╗
-██║     ██║   ██║██║╚██╔╝██║██║╚██╔╝██║██╔══╝  ██║╚██╗██║   ██║   ╚════██║
-╚██████╗╚██████╔╝██║ ╚═╝ ██║██║ ╚═╝ ██║███████╗██║ ╚████║   ██║   ███████║
- ╚═════╝ ╚═════╝ ╚═╝     ╚═╝╚═╝     ╚═╝╚══════╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+  ____
+ | __ )  __ _ _ __  _ __   ___ _ __
+ |  _ \ / _` | '_ \| '_ \ / _ \ '__|
+ | |_) | (_| | | | | | | |  __/ |
+ |____/ \__,_|_| |_|_| |_|\___|_|           _
+  / ___|___  _ __ ___  _ __ ___   ___ _ __ | |_ ___
+ | |   / _ \| '_ ` _ \| '_ ` _ \ / _ \ '_ \| __/ __|
+ | |__| (_) | | | | | | | | | | |  __/ | | | |_\__ \
+  \____\___/|_| |_| |_|_| |_| |_|\___|_| |_|\__|___/
 ```
 
-## Features
 
-Converts selected lines into banners-comments headers using figlet.
-( Automatically wrapped with comment tag! )
+Select one or more lines of text you want to turn into a banner heading. Open the VS Code command palette with Ctrl-Shift-P or Cmd-Shift-P, and then use the following commands.
 
-### Commands:
+## Normal use: use 3 heading levels consistently
 
-- __"Apply from list"__: Transform selected text into a figlet font selected from the list of available options!
-- __"Apply <h1|h2|h3> font"__: Transform selected text into a figlet font corresponding to a user-defined header type! (h1, h2 or h3)
-- __"Apply from favorites"__: Transform selected text into a figlet font selected from the list of favorites!
 
-![feature 'Apply'](images/banner-comments-apply.gif)
-
-- __"Set <h1|h2|h3> font"__: Assign a font for the specified header type!
-
+- __"Set <h1|h2|h3> font"__: Choose figlet fonts to use for 3 heading levels: h1, h2 and h3. You might try Univers, Standard and Mini.
 ![feature 'Set font'](images/banner-comments-set-font.gif)
 
-- __"Add to favorites"__: Add a font to the list of favorites so it's easily accessible later!
+- __"Apply <h1|h2|h3> font"__: Text is transformed into one of 3 fonts you have chosen for heading levels h1, h2 and h3.
+![feature 'Apply'](images/banner-comments-apply.gif)
+
+
+## Special use: select fonts individually
+
+You can select from the full list of figlet fonts.
+
+- __"Apply from list"__
+
+Or you can make a short list of favorites and select from that.
+
+- __"Add to favorites"__
+
+- __"Apply from favorites"__
+
 
 NOTE: Also supports multi-line selections:
 
 ![feature 'Multi-cursor'](images/banner-comments-multi-line.gif)
 
-## Requirements
 
-None!
 
 ## Extension Settings
 
@@ -56,9 +55,17 @@ This extension contributes the following settings:
 
 ## Known Issues
 
-- Only the languages provided by vscode are supported to wrap the banner with comments.
-
 ## Release Notes
+
+### 1.0.1
+- Improved ReadMe
+
+### 1.0.0 
+
+__Fixes__:
+- Added support for Cypress test files: .spec.js 
+- Added support for ES6 modules: .mjs
+Forked from version by Daniel-Junior Dube and IMFUZZ
 
 ### 0.3.0
 
