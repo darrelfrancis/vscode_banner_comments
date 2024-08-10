@@ -333,7 +333,7 @@ function removeFromFavorites() {
 */
 
 function getCommentTags(languageId: string) {
-  const commentTags: any = null;
+  let commentTags: any = null;
   const langConfig: any = getLanguageConfig(languageId);
   if (!langConfig) {
     console.warn(
@@ -498,7 +498,7 @@ function replaceSelectionWithBanner(
   figletConfig: any,
   commentTags: any
 ) {
-  let const: string = TextUtils.getSelectionIndentation(
+  const indentation: string = TextUtils.getSelectionIndentation(
     document,
     selection
   );
