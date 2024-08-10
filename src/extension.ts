@@ -10,11 +10,11 @@
 .##.....##.########..#####.##..#######..####.##.....##.########
 */
 
-import * as vscode from "vscode";
-import * as fs from "fs";
-import * as path from "path";
 import * as commentJson from "comment-json";
 import * as figlet from "figlet";
+import * as fs from "fs";
+import * as path from "path";
+import * as vscode from "vscode";
 import TextUtils from "./textUtils";
 
 /*
@@ -64,9 +64,9 @@ function applyFromList() {
     );
   }
 
-  let commentTags: any = getCommentTags(editor.document.languageId);
-  let availableFigletfonts: string[] = figlet.fontsSync();
-  let quickPickFigletFonts: vscode.QuickPickItem[] = availableFigletfonts.map(
+  const commentTags: any = getCommentTags(editor.document.languageId);
+  const availableFigletFonts: string[] = figlet.fontsSync();
+  const quickPickFigletFonts: vscode.QuickPickItem[] = availableFigletFonts.map(
     (figletFontName: string) => {
       return {
         label: figletFontName,
@@ -79,7 +79,7 @@ function applyFromList() {
     .showQuickPick(quickPickFigletFonts)
     .then((_selectedPickerItem: vscode.QuickPickItem) => {
       if (!_selectedPickerItem) return;
-      let config: any = vscode.workspace.getConfiguration("banner-comments");
+      const config: any = vscode.workspace.getConfiguration("banner-comments");
       const figletConfig: any = {
         font: _selectedPickerItem.label,
         horizontalLayout: config.get("figlet.horizontalLayout"),
@@ -124,8 +124,8 @@ function applyFromHeader(headerType) {
     );
   }
 
-  let config: any = vscode.workspace.getConfiguration("banner-comments");
-  let commentTags: any = getCommentTags(editor.document.languageId);
+  const config: any = vscode.workspace.getConfiguration("banner-comments");
+  const commentTags: any = getCommentTags(editor.document.languageId);
   const figletConfig: any = {
     font: vscode.workspace.getConfiguration("banner-comments").get(headerType),
     horizontalLayout: config.get("figlet.horizontalLayout"),
@@ -170,7 +170,7 @@ function applyFromFavorite() {
     );
   }
 
-  let commentTags: any = getCommentTags(editor.document.languageId);
+  const commentTags: any = getCommentTags(editor.document.languageId);
   getFavoriteFontFromUser((err, font) => {
     if (err) {
       vscode.window.showErrorMessage(
@@ -179,7 +179,7 @@ function applyFromFavorite() {
       return console.error(err);
     }
     if (!font) return;
-    let config: any = vscode.workspace.getConfiguration("banner-comments");
+    const config: any = vscode.workspace.getConfiguration("banner-comments");
     const figletConfig: any = {
       font: font,
       horizontalLayout: config.get("figlet.horizontalLayout"),
@@ -210,8 +210,8 @@ function applyFromFavorite() {
 */
 
 function setHeaderFont(headerType) {
-  var availableFigletfonts: string[] = figlet.fontsSync();
-  var quickPickFigletFonts: vscode.QuickPickItem[] = availableFigletfonts.map(
+  const availableFigletFonts: string[] = figlet.fontsSync();
+  const quickPickFigletFonts: vscode.QuickPickItem[] = availableFigletFonts.map(
     (figletFontName: string) => {
       return {
         label: figletFontName,
@@ -248,8 +248,8 @@ function setHeaderFont(headerType) {
 */
 
 function addAFontToFavorites() {
-  let availableFigletfonts: string[] = figlet.fontsSync();
-  let quickPickFigletFonts: vscode.QuickPickItem[] = availableFigletfonts.map(
+  const availableFigletFonts: string[] = figlet.fontsSync();
+  const quickPickFigletFonts: vscode.QuickPickItem[] = availableFigletFonts.map(
     (figletFontName: string) => {
       return {
         label: figletFontName,
@@ -294,8 +294,8 @@ function addAFontToFavorites() {
 */
 
 function removeFromFavorites() {
-  let config: any = vscode.workspace.getConfiguration("banner-comments");
-  let favorites: string[] = config.favorites;
+  const config: any = vscode.workspace.getConfiguration("banner-comments");
+  const favorites: string[] = config.favorites;
   if (favorites.length == 0) {
     vscode.window.showErrorMessage(
       "Banner-comments: The list of favorite fonts is empty, can't remove from empty list!"
@@ -333,8 +333,8 @@ function removeFromFavorites() {
 */
 
 function getCommentTags(languageId: string) {
-  let commentTags: any = null;
-  let langConfig: any = getLanguageConfig(languageId);
+  const commentTags: any = null;
+  const langConfig: any = getLanguageConfig(languageId);
   if (!langConfig) {
     console.warn(
       "Banner-comments: No matching vscode language extension found. No comment tag will be applied."
@@ -360,7 +360,7 @@ function getCommentTags(languageId: string) {
 .........................................................................
 */
 function getFavoriteFontFromUser(callback) {
-  let favorites: string[] = vscode.workspace
+  const favorites: string[] = vscode.workspace
     .getConfiguration("banner-comments")
     .get("favorites");
   if (favorites.length == 0) {
@@ -413,19 +413,18 @@ function getLanguageConfig(languageId: string): any {
 
   // Finding language config filepath.
   let configFilepath: string = null;
-	for (const _ext of vscode.extensions.all) {
-		
-//   _   _                 _ _        ____    _
-//  | | | | __ _ _ __   __| | | ___  |___ \  | | __ _ _ __   __ _  ___
-//  | |_| |/ _` | '_ \ / _` | |/ _ \   __) | | |/ _` | '_ \ / _` |/ __|
-//  |  _  | (_| | | | | (_| | |  __/  / __/  | | (_| | | | | (_| |\__ \
-//  |_| |_|\__,_|_| |_|\__,_|_|\___| |_____| |_|\__,_|_| |_|\__, ||___/
-//    __ _ ___   ___ _ __   ___  ___(_) __ _| |   ___ __ _ _|___/__  ___ 
-//   / _` / __| / __| '_ \ / _ \/ __| |/ _` | |  / __/ _` / __|/ _ \/ __|
-//  | (_| \__ \ \__ \ |_) |  __/ (__| | (_| | | | (_| (_| \__ \  __/\__ \
-//   \__,_|___/ |___/ .__/ \___|\___|_|\__,_|_|  \___\__,_|___/\___||___/
-//                  |_|
-		
+  for (const _ext of vscode.extensions.all) {
+    //   _   _                 _ _        ____    _
+    //  | | | | __ _ _ __   __| | | ___  |___ \  | | __ _ _ __   __ _  ___
+    //  | |_| |/ _` | '_ \ / _` | |/ _ \   __) | | |/ _` | '_ \ / _` |/ __|
+    //  |  _  | (_| | | | | (_| | |  __/  / __/  | | (_| | | | | (_| |\__ \
+    //  |_| |_|\__,_|_| |_|\__,_|_|\___| |_____| |_|\__,_|_| |_|\__, ||___/
+    //    __ _ ___   ___ _ __   ___  ___(_) __ _| |   ___ __ _ _|___/__  ___
+    //   / _` / __| / __| '_ \ / _ \/ __| |/ _` | |  / __/ _` / __|/ _ \/ __|
+    //  | (_| \__ \ \__ \ |_) |  __/ (__| | (_| | | | (_| (_| \__ \  __/\__ \
+    //   \__,_|___/ |___/ .__/ \___|\___|_|\__,_|_|  \___\__,_|___/\___||___/
+    //                  |_|
+
     if (_ext.id === "vscode.javascript") {
       return {
         comments: {
@@ -499,7 +498,7 @@ function replaceSelectionWithBanner(
   figletConfig: any,
   commentTags: any
 ) {
-  let indentation: string = TextUtils.getSelectionIndentation(
+  let const: string = TextUtils.getSelectionIndentation(
     document,
     selection
   );

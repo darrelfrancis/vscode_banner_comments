@@ -2,7 +2,7 @@
     "name": "banner-comments-fix",
     "displayName": "Banner comments",
     "description": "Converts selected lines into banner comments using figlet fonts",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "prof-darrel-francis",
     "homepage": "https://github.com/darrelfrancis/vscode_banner_comments",
     "bugs": {
@@ -122,19 +122,19 @@
                 },
                 "banner-comments.h1": {
                     "type": "string",
-                    "default": "Banner4",
+                    "default": "Univers",
                     "description": "Selected Header #1 font.",
                     "scope": "resource"
                 },
                 "banner-comments.h2": {
                     "type": "string",
-                    "default": "Banner4",
+                    "default": "Standard",
                     "description": "Selected Header #2 font.",
                     "scope": "resource"
                 },
                 "banner-comments.h3": {
                     "type": "string",
-                    "default": "Banner4",
+                    "default": "Mini",
                     "description": "Selected Header #3 font.",
                     "scope": "resource"
                 },

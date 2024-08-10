@@ -7,3 +7,5 @@ package-lock.json
 .vscode
 .vscodeignore
 *.vsix
+
+node_modules
