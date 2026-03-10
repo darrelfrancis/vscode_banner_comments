@@ -19,7 +19,6 @@ Select one or more lines of text you want to turn into a banner heading. Open th
 ## Normal use: use 3 heading levels consistently
 
 - **"Set <h1|h2|h3> font"**: Choose figlet fonts to use for 3 heading levels: h1, h2 and h3. You might try Coder Mini, Standard and Future Smooth.
-  ![feature 'Set font'](images/banner-comments-set-font.gif)
 
 - **"Apply <h1|h2|h3> font"**: Text is transformed into one of 3 fonts you have chosen for heading levels h1, h2 and h3.
   ![feature 'Apply'](images/banner-comments-apply.gif)
@@ -88,8 +87,8 @@ This extension contributes the following settings:
 
 **Settings**:
 
-- **banner-comments.figlet.horizontalLayout**: Figlet configuration providing 5 differents layout affecting the width of the font. See more details here: <https://www.npmjs.com/package/figlet#user-content-horizontallayout>
-- **banner-comments.figlet.verticalLayout**: Figlet configuration providing 5 differents layout affecting the height of the font. See more details here: <https://www.npmjs.com/package/figlet#verticallayout>
+- **banner-comments.figlet.horizontalLayout**: Figlet configuration providing 5 different layouts affecting the width of the font. See more details here: <https://www.npmjs.com/package/figlet#user-content-horizontallayout>
+- **banner-comments.figlet.verticalLayout**: Figlet configuration providing 5 different layouts affecting the height of the font. See more details here: <https://www.npmjs.com/package/figlet#verticallayout>
 - **banner-comments.favorites**: List of favorited fonts.
 
 ### 0.2.0
