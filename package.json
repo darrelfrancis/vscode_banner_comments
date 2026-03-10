@@ -122,7 +122,7 @@
                 },
                 "banner-comments.h1": {
                     "type": "string",
-                    "default": "Univers",
+                    "default": "Coder Mini",
                     "description": "Selected Header #1 font.",
                     "scope": "resource"
                 },
@@ -134,7 +134,7 @@
                 },
                 "banner-comments.h3": {
                     "type": "string",
-                    "default": "Mini",
+                    "default": "Future Smooth",
                     "description": "Selected Header #3 font.",
                     "scope": "resource"
                 },

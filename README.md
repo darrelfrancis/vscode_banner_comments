@@ -12,13 +12,13 @@
   \____\___/|_| |_| |_|_| |_| |_|\___|_| |_|\__|___/ fix
 ```
 
-A 2023 update on an old favourite, to accommodate `.mjs`, `.spec.js` and `.cy.js`.
+An update on an old favourite, to accommodate `.mjs`, `.spec.js` and `.cy.js`.
 
 Select one or more lines of text you want to turn into a banner heading. Open the VS Code command palette with Ctrl-Shift-P or Cmd-Shift-P, and then use the following commands.
 
 ## Normal use: use 3 heading levels consistently
 
-- **"Set <h1|h2|h3> font"**: Choose figlet fonts to use for 3 heading levels: h1, h2 and h3. You might try Univers, Standard and Mini.
+- **"Set <h1|h2|h3> font"**: Choose figlet fonts to use for 3 heading levels: h1, h2 and h3. You might try Coder Mini, Standard and Future Smooth.
   ![feature 'Set font'](images/banner-comments-set-font.gif)
 
 - **"Apply <h1|h2|h3> font"**: Text is transformed into one of 3 fonts you have chosen for heading levels h1, h2 and h3.
