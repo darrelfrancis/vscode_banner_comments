@@ -92,6 +92,15 @@ This extension contributes the following settings:
 - **banner-comments.figlet.verticalLayout**: Figlet configuration providing 5 different layouts affecting the height of the font. See more details here: <https://www.npmjs.com/package/figlet#verticallayout>
 - **banner-comments.favorites**: List of favorited fonts.
 
+### 1.2.2
+
+- Updated README to clarify default fonts behaviour
+
+### 1.2.0
+
+- Updated default font for h1 to "Coder Mini"
+- Updated default font for h3 to "Future Smooth"
+
 ### 0.2.0
 
 - Fixed indentation issues where only the first line was indented correctly.
