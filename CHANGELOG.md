@@ -4,6 +4,12 @@ All notable changes to the "banner-comments" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [1.2.2] - 2026-03-10
+
+### Changed
+
+- Updated README to clarify default fonts behaviour
+
 ## [1.2.1] - 2026-03-10
 
 ### Changed

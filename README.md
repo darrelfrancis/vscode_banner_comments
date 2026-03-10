@@ -18,10 +18,11 @@ Select one or more lines of text you want to turn into a banner heading. Open th
 
 ## Normal use: use 3 heading levels consistently
 
-- **"Set <h1|h2|h3> font"**: Choose figlet fonts to use for 3 heading levels: h1, h2 and h3. You might try Coder Mini, Standard and Future Smooth.
-
-- **"Apply <h1|h2|h3> font"**: Text is transformed into one of 3 fonts you have chosen for heading levels h1, h2 and h3.
+- **"Apply <h1|h2|h3> font"**: Text is transformed into one of the heading fonts, which default to h1=Coder Mini, h2=Standard and h3=Future Smooth.
   ![feature 'Apply'](images/banner-comments-apply.gif)
+
+- **"Set <h1|h2|h3> font"**:
+  Change which figlet fonts to use for the 3 heading levels
 
 ## Special use: select fonts individually
 
