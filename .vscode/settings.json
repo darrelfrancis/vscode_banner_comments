@@ -6,6 +6,9 @@
     "search.exclude": {
         "out": true // set this to false to include "out" folder in search results
     },
+    "banner-comments.h1": "Coder Mini",
+    "banner-comments.h2": "Standard",
+    "banner-comments.h3": "Future Smooth",
     "cSpell.words": [
         "favorited",
         "Figletfonts",
